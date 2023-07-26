@@ -9,9 +9,12 @@ public static class FileHandler
         return File.Open(path, FileMode.Open, FileAccess.ReadWrite);
     }
 
-    internal static void Save(FileStream file, string result)
+    public static async Task Save(FileStream file, string result)
     {
-        file.Position = 0;
-        file.Write(Encoding.UTF8.GetBytes(result));
+        file.Seek(0, SeekOrigin.Begin);
+
+        var newFileContent = Encoding.UTF8.GetBytes(result);
+        await file.WriteAsync(newFileContent);
+        file.SetLength(newFileContent.Length);
     }
 }

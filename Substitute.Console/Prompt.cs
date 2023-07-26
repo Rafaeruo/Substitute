@@ -33,7 +33,7 @@ public class Prompt
                     continue;
                 }
 
-                FileHandler.Save(file, result);
+                await FileHandler.Save(file, result);
             }
         }
     }
