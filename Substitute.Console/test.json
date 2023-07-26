@@ -1,0 +1,8 @@
+{
+  "connectionString": "",
+  "filesystem": {
+    "path": "",
+    "allowWriting": false,
+    "untouched":  3.14
+  }
+}

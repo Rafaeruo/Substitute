@@ -1,0 +1,42 @@
+{
+  "profiles": [
+    {
+      "name": "Default",
+      "files": [
+        {
+          "name":  "Test file",
+          "values": {
+            "connectionString": "test value yey",
+            "filesystem": {
+              "path": "./files",
+              "allowWriting": true,
+              "invalid": 1
+            }
+          },
+          "paths": [ "./test.json" ],
+          "optional": false,
+          "fileType": "JSON"
+        }
+      ]
+    },
+    {
+      "name": "Test",
+      "files": [
+        {
+          "name":  "Test file 2",
+          "values": {
+            "connectionString": "test value yey",
+            "filesystem": {
+              "path": "./files",
+              "allowWriting": true,
+              "invalid": 1
+            }
+          },
+          "paths": [ "./test.json" ],
+          "optional": true,
+          "fileType": "JSON"
+        }
+      ]
+    }
+  ]
+}
