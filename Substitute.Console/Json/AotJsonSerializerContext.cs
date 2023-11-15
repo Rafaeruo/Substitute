@@ -3,7 +3,9 @@
 namespace Substitute.Console.Json;
 
 [JsonSerializable(typeof(Settings.Settings))]
-[JsonSourceGenerationOptions(PropertyNameCaseInsensitive = true)]
+[JsonSourceGenerationOptions(
+    PropertyNameCaseInsensitive = true,
+    ReadCommentHandling = System.Text.Json.JsonCommentHandling.Skip)]
 public partial class AotJsonSerializerContext : JsonSerializerContext
 {
 }

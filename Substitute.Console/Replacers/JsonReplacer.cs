@@ -8,7 +8,10 @@ namespace Substitute.Console.Replacers
     {
         public Task<string?> Replace(FileStream file, FileDefinition fileDefinition)
         {
-            var document = JsonNode.Parse(file)?.AsObject();
+            var document = JsonNode.Parse(file, null, new JsonDocumentOptions
+            {
+                CommentHandling = JsonCommentHandling.Skip
+            })?.AsObject();
 
             if (document is null)
             {
