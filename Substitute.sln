@@ -8,6 +8,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A944583F-A9F7-4B74-972E-740F385BE6F9}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+		publish-linux.Dockerfile = publish-linux.Dockerfile
+		publish-windows.Dockerfile = publish-windows.Dockerfile
 	EndProjectSection
 EndProject
 Global
